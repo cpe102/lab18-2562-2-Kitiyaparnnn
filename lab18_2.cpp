@@ -40,5 +40,6 @@ void overlap(Rect *a,Rect *b)
 	double r1_y = a->y - a->h;
 	double r2_y = b->y - b->h;
 	area = (min(r1_x, r2_x) - max(a->x, b->x)) * (min(a->y, b->y) - max(r1_y, r2_y)); 
+    if(area<0) area = 0;
 	cout<<"Overlap area = "<<area ;
 }
